@@ -1,0 +1,98 @@
+{
+  "layer": "top",
+  "position": "top",
+  "margin": "5",
+  "modules-left": [ "custom/arch" , "hyprland/workspaces"],
+  "modules-center": [ "clock" ],
+  "modules-right": [ "pulseaudio","network", "bluetooth", "battery", "custom/power" ],
+
+  "custom/arch": {
+    "format": "♛",
+    "on-click": "rofi -show drun -theme ~/.config/rofi/config.rasi",
+    "tooltip": false
+  },
+
+  "custom/power": {
+    "format": "⏻ ",
+    "on-click": "~/.config/rofi/powermenu.sh",
+    "tooltip": false
+  },
+
+  "hyprland/workspaces": {
+    "format": "{icon}",
+    "format-icons": {
+      "1": "[1]",
+      "2": "[2]",
+      "3": "[3]",
+      "4": "[4]",
+      "5": "[5]",
+      "active": "[●]"
+    }
+  },
+
+  "pulseaudio": {
+      // "scroll-step": 1, // %, can be a float
+      "format": "{icon}  {volume}% ",
+      "format-bluetooth": "{volume}% {icon} {format_source}",
+      "format-bluetooth-muted": " {icon} {format_source}",
+      "format-muted": " {format_source}",
+      "format-source": "{volume}% ",
+      "format-source-muted": "",
+      "format-icons": {
+          "headphone": "",
+          "hands-free": "",
+          "headset": "",
+          "phone": "",
+          "portable": "",
+          "car": "",
+          "default": ["", "", ""]
+      },
+      "on-click": "pavucontrol"
+  },
+
+
+  "battery": {
+    "format": " {capacity}%",
+    "format-charging": " {capacity}%",
+    "tooltip": false
+  },
+
+
+
+"network": {
+  "format-wifi": "  {essid}",
+  "format-ethernet": "󰈁 {ifname}  ",
+  "format-disconnected": "󰖪  Disconnected",
+  "on-click": "nm-connection-editor",
+  "tooltip": false
+},
+
+//"network": {
+    // "interface": "wlp2*", // (Optional) To force the use of this interface
+   // "format-wifi": "{essid} ({signalStrength}%) ",
+   // "format-ethernet": "{ipaddr}/{cidr} ",
+   // "tooltip-format": "{ifname} via {gwaddr} ",
+   // "format-linked": "{ifname} (No IP) ",
+   // "format-disconnected": "Disconnected ⚠",
+   // "format-alt": "{ifname}: {ipaddr}/{cidr}"
+//},
+
+
+
+
+"bluetooth": {
+  "format": "",
+  "on-click": "blueman-manager",
+  "tooltip": true,
+  "tooltip-format": "{status}\n{device_enumerate}"
+
+},
+
+
+  "clock": {
+    "format": "{:%I:%M %p}",
+    "tooltip-format": "<big>{:%d %B}</big>\n<tt><big>{calendar}</big></tt>",
+    "tooltip": true
+
+ },
+},
