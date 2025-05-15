@@ -1,0 +1,38 @@
+* {
+  font-family: Agave Nerd Font, monospace;
+  font-size: 13px;
+  color: #ffffff;
+  background: rgba(0, 0, 0, 0.6);  /* Transparent black */
+  border-radius: 10px;             /* Slightly rounded bar */
+  border: none;
+}
+
+window#waybar {
+  background: rgba(0, 0, 0, 0.6);  /* Slight transparent black */
+  border-radius: 50px;             /* Slightly rounded bar */
+  padding: 2px 6px;
+}
+
+#workspaces button {
+  padding: 0 6px;
+  margin: 0 2px;
+  border-radius: 3px;
+  background: transparent;
+  color: #000000;
+}
+
+#workspaces button.active {
+  color: #ff6b6b;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+#clock, #battery, #network, #bluetooth, #custom-arch, #custom-power {
+  padding: 0 8px;
+  background: transparent;
+  color: #ffffff;
+}
+
+#custom-arch:hover,
+#custom-power:hover {
+  color: #ff6b6b;
+}
